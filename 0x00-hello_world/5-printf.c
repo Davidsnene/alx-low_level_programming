@@ -1,9 +1,12 @@
 #include <stdio.h>
 /**
- * printf - print word
+ * main - Entry point
  *
- * returne: allways 0 (succes)
+ * Description: 'print word'
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
