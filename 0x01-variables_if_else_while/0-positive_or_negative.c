@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* no more headers */
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * description: print n and comment
+ * Description: 'print n and comment'
  *
- * returne: Always 0 (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
@@ -18,15 +17,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("%d is positive\n",n);
+		printf("%d is positive\n", n);
 	}
 	else if (n == 0)
 	{
-		printf("%d is zero\n",n);
+		printf("%d is zero\n", n);
 	}
 	else
 	{
-		printf("%d is negative\n",n);
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
