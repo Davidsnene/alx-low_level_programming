@@ -9,7 +9,7 @@
  *
  * Return: nothing
  */
-int main(void);
+int main(void)
 {
 int a;
 int b;
