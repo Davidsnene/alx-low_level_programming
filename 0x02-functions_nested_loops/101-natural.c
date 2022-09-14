@@ -9,25 +9,21 @@
  *
  * Return: nothing
  */
-int main (void);
+int main(void);
 	int a;
 	int b;
 {
 	for (a = 0, a <= 1024, a++)
 	{
 		if (a % 3 == 0)
-		{
-			printf ("%d, ", a)
-		}
+			printf("%d, ", a)
 
 	}
-	
+
 	for (b = 0, b <= 1024, b++)
 	{
 		if (b % 5 == 0)
-		{
-			printf ("%d, ", b)
-		}
+			printf("%d, ", b)
 	}
 
 	return (a + b);
