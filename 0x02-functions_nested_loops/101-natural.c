@@ -10,9 +10,9 @@
  * Return: nothing
  */
 int main(void);
-	int a;
-	int b;
 {
+int a;
+int b;
 	for (a = 0, a <= 1024, a++)
 	{
 		if (a % 3 == 0)
