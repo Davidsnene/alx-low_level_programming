@@ -2,6 +2,7 @@
 
 /**
  * _islower - Entry point
+ * @x: alphabet letter
  *
  * Description: checks for lowercase character
  *
