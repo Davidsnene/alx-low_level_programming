@@ -11,20 +11,16 @@
  */
 int main(void)
 {
-int a;
-int b;
+int a, b = 0;
 	for (a = 0; a <= 1024; a++)
 	{
-		if (a % 3 == 0)
-			printf("%d, ", a);
-
+		if ((a % 3 == 0) || (a % 5 == 0))
+		{
+			b = b + a
+		}
 	}
+	
+	printf("%d\n", b);
 
-	for (b = 0; b <= 1024; b++)
-	{
-		if (b % 5 == 0)
-			printf("%d, ", b);
-	}
-
-	return (a + b);
+	return (0);
 }
