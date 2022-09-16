@@ -2,6 +2,7 @@
 
 /**
  * print_line - Entry point
+ * @n: number of times the character _ should be printed
  *
  * Description: draws line
  *
