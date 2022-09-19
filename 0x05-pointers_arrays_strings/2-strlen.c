@@ -10,7 +10,7 @@
 * Return: Nothing
 */
 
-void _strlen(char *s)
+int _strlen(char *s)
 {
 	int i;
 
