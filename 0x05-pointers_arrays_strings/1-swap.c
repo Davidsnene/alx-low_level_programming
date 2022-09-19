@@ -12,10 +12,8 @@
 
 void swap_int(int *a, int *b)
 {
-	int r = 0;
-
-	*a == *a + r;
-	*b == *b + r;
-	*a == *b - r;
-	*b == *a - r;
+	*a == *a + 1;
+	*b == *b + 1;
+	*a == *b - 1;
+	*b == *a - 1;
 }
