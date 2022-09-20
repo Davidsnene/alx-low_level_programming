@@ -13,8 +13,8 @@ void print_rev(char *s)
 {
 	int x;
 
-	x = 0
-	while (s[x]);
+	x = 0;
+	while (s[x])
 		x++;
 
 	while (x--)
