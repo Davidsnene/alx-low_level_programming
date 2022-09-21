@@ -12,6 +12,7 @@
 
 char *_strcat(char *dest, char *src)
 {
-	dest = NULL;
-	src = NULL;
+	*dest = 0;
+	*src = 0;
+return (0);
 }
