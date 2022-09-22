@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
 * reverse_array - Entry point
 * @a: the array to reverse
