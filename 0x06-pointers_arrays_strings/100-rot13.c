@@ -37,7 +37,7 @@ char *rot13(char *str)
 		{
 			if (str[index1] == alpha[index2])
 			{
-				str[index1] = rot13alpha[indx2];
+				str[index1] = rot13alpha[index2];
 				break;
 			}
 		}
