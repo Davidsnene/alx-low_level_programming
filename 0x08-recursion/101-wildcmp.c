@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
-* strlen_no_wilds - Returns the length of a string,
+* no_wild - Returns the length of a string,
 * ignoring wildcard characters.
 * @str: The string to be measured.
 *
 * Return: The length.
 */
-int strlen_no_wilds(char *str)
+int no_wild(char *str)
 {
 	int len = 0, index = 0;
 
@@ -17,28 +17,28 @@ int strlen_no_wilds(char *str)
 			len++;
 
 		index++;
-		len += strlen_no_wilds(str + index);
+		len += no_wild(str + index);
 	}
 
 	return (len);
 }
 
 /**
-* iterate_wild - Iterates through a string located at a wildcard
+* wild - Iterates through a string located at a wildcard
 *                until it points to a non-wildcard character.
 * @wildstr: The string to be iterated through.
 */
-void iterate_wild(char **wildstr)
+void wild(char **wildstr)
 {
 	if (**wildstr == '*')
 	{
 		(*wildstr)++;
-		iterate_wild(wildstr);
+		wild(wildstr);
 	}
 }
 
 /**
-* postfix_match - Checks if a string str matches the postfix of
+* matching - Checks if a string str matches the postfix of
 * another string potentially containing wildcards.
 * @str: The string to be matched.
 * @postfix: The postfix.
@@ -47,18 +47,18 @@ void iterate_wild(char **wildstr)
 * located at the end of postfix.
 * Otherwise - a pointer to the first unmatched character in postfix.
 */
-char *postfix_match(char *str, char *postfix)
+char *matching(char *str, char *postfix)
 {
-	int str_len = strlen_no_wilds(str) - 1;
-	int postfix_len = strlen_no_wilds(postfix) - 1;
+	int str_len = no_wild(str) - 1;
+	int postfix_len = no_wild(postfix) - 1;
 
 	if (*postfix == '*')
-		iterate_wild(&postfix);
+		wild(&postfix);
 
 	if (*(str + str_len - postfix_len) == *postfix && *postfix != '\0')
 	{
 		postfix++;
-		return (postfix_match(str, postfix));
+		return (matching(str, postfix));
 	}
 
 	return (postfix);
@@ -76,8 +76,8 @@ int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == '*')
 	{
-		iterate_wild(&s2);
-		s2 = postfix_match(s1, s2);
+		wild(&s2);
+		s2 = matching(s1, s2);
 	}
 
 	if (*s2 == '\0')
