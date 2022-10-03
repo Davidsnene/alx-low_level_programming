@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* create_ar - Entry point
+* create_array - Entry point
 * @size: The size of the array to be initialized.
 * @c: The specific char to intialize the array with.
 *
@@ -10,7 +10,7 @@
 *
 * Return: Nothing
 */
-char *create_ar(unsigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
 	char *ar;
 	unsigned int i;
